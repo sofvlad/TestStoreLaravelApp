@@ -20,19 +20,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        \Illuminate\Support\Facades\DB::table('products')->truncate();
-        \Illuminate\Support\Facades\DB::table('product_types')->truncate();
-        \Illuminate\Support\Facades\DB::table('product_type_attributes')->truncate();
-        \Illuminate\Support\Facades\DB::table('product_attributes')->truncate();
-        \Illuminate\Support\Facades\DB::table('product_attribute_values')->truncate();
-
         $productType = Type::factory()->create([
             'code' => 'sneakers',
             'name' => 'Кроссовки',

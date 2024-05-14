@@ -21,7 +21,7 @@ class ProductRepository
      *
      * @return Collection
      */
-    public function getListByTypeId(int $typeId, ?array $attributeFilters = null, $pageSize = 10): AbstractPaginator
+    public function getListByTypeId(int $typeId, ?array $attributeFilters = null, $pageSize = 40): AbstractPaginator
     {
         $products = Product::where('product_type_id', $typeId)
             ->orderBy('id');
